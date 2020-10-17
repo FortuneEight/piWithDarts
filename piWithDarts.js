@@ -6,7 +6,7 @@ const batchCount = 10000;
 const minConstraint = 3.14;
 const maxConstraint = 3.15;
 const minDartConstraint = diameter * diameter;
-const seed = null; // 169, 120509, 8
+const seed = 169; // 169, 120509, 8
 
 let dartCount;
 let dartsInCircle;
