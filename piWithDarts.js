@@ -2,7 +2,7 @@ const diameter = 800;
 const dartDiameter = 1;
 const colorCircle = "red";
 const colorSquare = "black";
-const batchCount = 5000;
+const batchCount = 1000;
 const minConstraint = 3.1415;
 const maxConstraint = 3.1416;
 const minDartConstraint = 50000;
@@ -26,7 +26,7 @@ function initialize() {
     dartsInCircle = 0;
     piDiv = null;
     randomMethod = goodLinearCongruential;
-    repeats = 6842;
+    repeats = 2;
 }
 
 function setup() {
@@ -46,11 +46,12 @@ function setup() {
     circle(diameter / 2, diameter / 2, diameter);
     piDiv = createDiv().style('font-size', '12pt');
     seed = randomP5js(0, diameter * diameter);
+    frameRate(15)
 }
 
 function draw() {
     generateDarts(batchCount);
-    // numericOutput();
+    numericOutput();
 }
 
 function generateDarts(bc) {
